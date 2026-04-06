@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All you need to know about Udoka Kasie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --ink: #0E0E0D;
+    --rust: #C4481A;
+    --rust-light: #E8633A;
+    --rust-dim: #7A2A0C;
+    --warm-gray: #8C8880;
+    --border: rgba(14,14,13,0.12);
+    --surface: #FDFAF5;
+    --surface-2: #F0EBE0;
+    --accent-mark: #C4481A;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Instrument Sans', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ---- NAV ---- */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(245,240,232,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    transition: all 0.3s;
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--rust); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--rust); }
+
+  /* ---- HERO ---- */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-text-col {
+    min-width: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 3rem 4rem 4rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--rust);
+  }
+
+  .hero-headline {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(3rem, 5.5vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 2rem;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--warm-gray);
+    max-width: 42ch;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+  }
+
+  .hero-sub strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--rust);
+    color: #fff;
+    padding: 0.875rem 2rem;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-primary:hover { background: var(--rust-dim); transform: translateY(-1px); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    padding: 0.875rem 2rem;
+    border: 1.5px solid var(--ink);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  .btn-ghost:hover { background: var(--ink); color: var(--cream); }
+
+  .hero-photo-col {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface-2);
+  }
+
+  .hero-photo-bg {
+    position: absolute;
+    inset: 0;
+    /* background: linear-gradient(135deg, #E8D5C0 0%, #C4A882 100%); */
+  }
+
+  .hero-photo-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .photo-circle {
+    /* width: 260px; */
+    height: 320px;
+    border-radius: 130px 130px 0 0;
+    background: rgba(196,72,26,0.15);
+    border: 2px solid rgba(196,72,26,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--rust-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero-photo-note {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: rgba(196,72,26,0.6);
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+
+  .hero-decor-number {
+    position: absolute;
+    bottom: 2rem;
+    right: 2.5rem;
+    font-family: var(--font-display);
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(196,72,26,0.08);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+  }
+
+  .hero-scroll-hint::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 32px;
+    background: var(--warm-gray);
+  }
+
+  /* ---- SECTION BASE ---- */
+  section {
+    padding: 6rem 4rem;
+    position: relative;
+  }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: var(--rust);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .section-title em { font-style: italic; color: var(--rust); }
+
+  /* ---- PROJECTS ---- */
+  #projects { background: var(--surface); }
+
+  .projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: 0;
+    border: 1.5px solid var(--ink);
+  }
+
+  .filter-tab {
+    padding: 0.6rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--warm-gray);
+    border: none;
+    border-right: 1px solid var(--ink);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-tab:last-child { border-right: none; }
+
+  .filter-tab.active {
+    background: var(--ink);
+    color: var(--cream);
+  }
+
+  .filter-tab:hover:not(.active) { background: var(--surface-2); color: var(--ink); }
+
+  #projects { background: var(--surface); }
+
+  .projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: 0;
+    border: 1.5px solid var(--ink);
+  }
+
+  .filter-tab {
+    padding: 0.6rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--warm-gray);
+    border: none;
+    border-right: 1px solid var(--ink);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-tab:last-child { border-right: none; }
+  .filter-tab.active { background: var(--ink); color: var(--cream); }
+  .filter-tab:hover:not(.active) { background: var(--surface-2); color: var(--ink); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    background: var(--border);
+  }
+
+  /* Card */
+  .project-card {
+    background: var(--cream);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.22s ease;
+  }
+
+  .project-card:hover { transform: translateY(-3px); }
+  .project-card.hidden { display: none; }
+
+  /* Screenshot cover */
+  .card-cover {
+    /* width: 100%; */
+    aspect-ratio: 16/10;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .card-cover-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .project-card:hover .card-cover-img { transform: scale(1.04); }
+
+  /* Illustrated cover fallback */
+  .card-cover-illus {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+
+  .project-card:hover .card-cover-illus { transform: scale(1.04); }
+
+  .cover-label {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.85rem;
+    color: #fff;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  }
+
+  .cover-sub {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+    z-index: 1;
+  }
+
+  /* Card body */
+  .card-body {
+    padding: 1.5rem 1.75rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .card-type {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .type-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--rust); }
+
+  .card-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.6rem;
+    line-height: 1.15;
+  }
+
+  .card-excerpt {
+    font-size: 0.83rem;
+    color: var(--warm-gray);
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .stack-tag {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    padding: 0.2rem 0.5rem;
+    background: var(--surface-2);
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    border: 0.5px solid var(--border);
+  }
+
+  .card-view-btn {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--rust);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.2s;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .project-card:hover .card-view-btn { gap: 0.75rem; }
+
+  /* ---- PROJECT MODAL ---- */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(14,14,13,0.75);
+    z-index: 200;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4vh 1rem;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal-backdrop.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal {
+    background: var(--cream);
+    width: 100%;
+    max-width: 820px;
+    position: relative;
+    transform: translateY(24px);
+    transition: transform 0.35s ease;
+    flex-shrink: 0;
+  }
+
+  .modal-backdrop.open .modal { transform: translateY(0); }
+
+  .modal-close {
+    position: absolute;
+    top: 1.25rem; right: 1.25rem;
+    width: 36px; height: 36px;
+    background: var(--ink);
+    color: var(--cream);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10;
+    transition: background 0.2s;
+  }
+
+  .modal-close:hover { background: var(--rust); }
+
+  .modal-cover {
+    width: 100%;
+    aspect-ratio: 16/8;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .modal-cover-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .modal-cover-illus {
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .modal-cover-illus .cover-overlay { position: absolute; inset: 0; }
+
+  .modal-cover-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 3rem;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  .modal-body { padding: 2.5rem 3rem 3rem; }
+
+  .modal-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .modal-type {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rust);
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+
+  .modal-stack { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+  .modal-story {
+    font-size: 1rem;
+    color: var(--ink);
+    line-height: 1.85;
+    margin-bottom: 2.5rem;
+    max-width: 65ch;
+  }
+
+  .modal-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .modal-btn-primary {
+    background: var(--rust);
+    color: #fff;
+    padding: 0.875rem 2rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: background 0.2s;
+    border: 2px solid var(--rust);
+  }
+
+  .modal-btn-primary:hover { background: var(--rust-dim); border-color: var(--rust-dim); }
+
+  .modal-btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    padding: 0.875rem 2rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 2px solid var(--ink);
+    transition: all 0.2s;
+  }
+
+  .modal-btn-ghost:hover { background: var(--ink); color: var(--cream); }
+
+  .modal-btn-disabled {
+    background: transparent;
+    color: var(--warm-gray);
+    padding: 0.875rem 2rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 2px solid var(--border);
+    cursor: default;
+    font-style: italic;
+  }
+
+  /* ---- VIDEO / CREATOR ---- */
+  #creator { background: var(--ink); color: var(--cream); }
+
+  #creator .section-label { color: var(--rust-light); }
+  #creator .section-label::before { background: var(--rust-light); }
+  #creator .section-title { color: var(--cream); }
+
+  .creator-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+    margin-top: 3.5rem;
+    align-items: start;
+  }
+
+  .yt-mockup {
+    background: #0F0F0F;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .yt-topbar {
+    background: #212121;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .yt-logo-text {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .yt-logo-text span { color: #FF0000; }
+
+  .yt-channel-banner {
+    height: 160px;
+    /* background: linear-gradient(135deg, #1A0A04 0%, #3D1508 50%, #C4481A 100%); */
+    display: flex;
+    align-items: flex-end;
+    padding: 0.8rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .yt-banner-text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: -0.02em;
+  }
+
+  .yt-channel-info {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .yt-avatar {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rust), #7A2A0C);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: #fff;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .yt-channel-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.15rem;
+  }
+
+  .yt-subs {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.04em;
+  }
+
+  .yt-videos {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .yt-thumb {
+    aspect-ratio: 16/9;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .yt-thumb-1 { background: linear-gradient(135deg, #1a0a04 0%, #8B2500 100%); }
+  .yt-thumb-2 { background: linear-gradient(135deg, #0a1a1a 0%, #0F4D4D 100%); }
+  .yt-thumb-3 { background: linear-gradient(135deg, #1a1000 0%, #7A5500 100%); }
+  .yt-thumb-4 { background: linear-gradient(135deg, #0d0d1a 0%, #2D1B6E 100%); }
+
+  .yt-play {
+    width: 28px; height: 28px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem;
+    color: #000;
+    flex-shrink: 0;
+  }
+
+  .yt-thumb-title {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 0.4rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.3;
+  }
+
+  .creator-right { display: flex; flex-direction: column; gap: 2rem; }
+
+  .creator-blurb {
+    font-size: 1.05rem;
+    color: rgba(245,240,232,0.72);
+    line-height: 1.8;
+  }
+
+  .creator-blurb strong { color: var(--cream); font-weight: 600; }
+
+  .speaking-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .speaking-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 0.5px solid rgba(255,255,255,0.08);
+    transition: border-color 0.2s;
+  }
+
+  .speaking-item:hover { border-color: rgba(196,72,26,0.5); }
+
+  .speaking-icon {
+    width: 36px; height: 36px;
+    background: rgba(196,72,26,0.15);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .speaking-text { flex: 1; }
+
+  .speaking-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+
+  .speaking-desc {
+    font-size: 0.8rem;
+    color: rgba(245,240,232,0.45);
+    font-family: var(--font-mono);
+    letter-spacing: 0.03em;
+  }
+
+  .creator-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--rust-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196,72,26,0.3);
+    padding-bottom: 0.2rem;
+    transition: border-color 0.2s;
+    margin-top: auto;
+  }
+
+  .creator-cta:hover { border-color: var(--rust-light); }
+
+  /* ---- ORIGIN STORY ---- */
+  #origin {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+    padding: 0;
+    min-height: 80vh;
+  }
+
+  .origin-aside {
+    background: var(--rust);
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+  }
+
+  .origin-year {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.15);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .origin-aside .section-label {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1.5rem;
+  }
+
+  .origin-aside .section-label::before { background: rgba(255,255,255,0.7); }
+
+  .origin-aside-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .origin-content {
+    padding: 6rem 5rem 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .origin-drop {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--rust);
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.15rem;
+    margin-top: 0.2rem;
+  }
+
+  .origin-body {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--ink);
+    max-width: 62ch;
+  }
+
+  .origin-body p { margin-bottom: 1.5rem; }
+
+  .origin-body p:first-child::first-letter {
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: var(--rust);
+    float: left;
+    line-height: 0.75;
+    margin-right: 0.1rem;
+    margin-top: 0.2rem;
+  }
+
+  .origin-pull {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    border-left: 4px solid var(--rust);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* ---- WORKFLOW ---- */
+  #workflow { background: var(--surface); }
+
+  .workflow-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 3.5rem;
+    background: var(--border);
+  }
+
+  .workflow-col { background: var(--cream); padding: 3rem; }
+
+  .workflow-col-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .workflow-icon-box {
+    width: 42px; height: 42px;
+    background: var(--rust);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .workflow-col-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .workflow-steps { display: flex; flex-direction: column; gap: 0; }
+
+  .workflow-step {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+    border-bottom: 0.5px solid var(--border);
+    position: relative;
+  }
+
+  .step-num {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--rust);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    width: 24px;
+    flex-shrink: 0;
+    padding-top: 0.1rem;
+  }
+
+  .step-content {}
+
+  .step-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .step-desc {
+    font-size: 0.83rem;
+    color: var(--warm-gray);
+    line-height: 1.6;
+  }
+
+  .step-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+  }
+
+  .tool-pill {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    background: var(--surface-2);
+    border: 0.5px solid var(--border);
+    color: var(--warm-gray);
+    letter-spacing: 0.04em;
+  }
+
+  /* ---- ROLES ---- */
+  #roles { background: var(--ink); color: var(--cream); overflow: hidden; }
+
+  #roles .section-label { color: var(--rust-light); }
+  #roles .section-label::before { background: var(--rust-light); }
+  #roles .section-title { color: var(--cream); }
+
+  .roles-intro {
+    font-size: 1rem;
+    color: rgba(245,240,232,0.55);
+    max-width: 50ch;
+    line-height: 1.75;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .roles-list { display: flex; flex-direction: column; gap: 0; }
+
+  .role-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.75rem 0;
+    border-top: 0.5px solid rgba(255,255,255,0.07);
+    cursor: default;
+    transition: padding 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .role-row::before {
+    content: '';
+    position: absolute;
+    left: -4rem;
+    top: 0; bottom: 0;
+    width: 3px;
+    background: var(--rust);
+    transition: left 0.3s ease;
+  }
+
+  .role-row:hover::before { left: 0; }
+  .role-row:hover { padding-left: 1rem; }
+
+  .role-num {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.06em;
+    width: 2ch;
+  }
+
+  .role-name {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .role-line {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: rgba(245,240,232,0.35);
+    letter-spacing: 0.04em;
+    text-align: right;
+    max-width: 28ch;
+    line-height: 1.5;
+  }
+
+  /* ---- CURRENT WORK ---- */
+  #current {
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .current-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 3.5rem;
+  }
+
+  .emergent-card {
+    background: var(--ink);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .emergent-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--rust), var(--rust-light));
+  }
+
+  .emergent-badge {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rust-light);
+    background: rgba(196,72,26,0.15);
+    padding: 0.35rem 0.75rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    border: 0.5px solid rgba(196,72,26,0.3);
+  }
+
+  .emergent-name {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+  }
+
+  .emergent-tagline {
+    font-size: 0.85rem;
+    color: rgba(245,240,232,0.5);
+    margin-bottom: 1.75rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.03em;
+  }
+
+  .emergent-desc {
+    font-size: 0.93rem;
+    color: rgba(245,240,232,0.72);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .progress-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.35);
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .progress-bar {
+    height: 3px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 0;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--rust), var(--rust-light));
+    width: 0%;
+    transition: width 1.5s ease;
+    border-radius: 0;
+  }
+
+  .emergent-milestones { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .milestone {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: rgba(245,240,232,0.45);
+    letter-spacing: 0.03em;
+  }
+
+  .milestone.done { color: rgba(245,240,232,0.72); }
+
+  .milestone-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    flex-shrink: 0;
+  }
+
+  .milestone.done .milestone-dot { background: var(--rust); }
+
+  .current-text {}
+
+  .current-text .section-title { margin-bottom: 1.5rem; }
+
+  .current-desc {
+    font-size: 1.05rem;
+    color: var(--warm-gray);
+    line-height: 1.8;
+    margin-bottom: 1.75rem;
+  }
+
+  .current-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .stat-box {
+    background: var(--cream);
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--rust);
+    display: block;
+    letter-spacing: -0.02em;
+  }
+
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--warm-gray);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+  }
+
+  /* ---- INTERACTIVE ---- */
+  #fun {
+    background: var(--surface-2);
+    text-align: center;
+    padding: 6rem 4rem;
+  }
+
+  .fun-inner { max-width: 600px; margin: 0 auto; }
+
+  .fun-trigger {
+    display: inline-block;
+    margin-top: 3rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .fun-btn {
+    background: transparent;
+    border: 2px solid var(--ink);
+    padding: 1.25rem 3rem;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fun-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--ink);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 0;
+  }
+
+  .fun-btn:hover::before { transform: translateY(0); }
+  .fun-btn:hover { color: var(--cream); border-color: var(--ink); }
+  .fun-btn span, .fun-btn .fun-arrow { position: relative; z-index: 1; }
+
+  .fun-arrow {
+    font-size: 1.3rem;
+    transition: transform 0.2s;
+    position: relative;
+    z-index: 1;
+  }
+
+  .fun-btn:hover .fun-arrow { transform: rotate(45deg); }
+
+  .fact-display {
+    margin-top: 2.5rem;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(8px);
+  }
+
+  .fact-display.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fact-text {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.6;
+    max-width: 50ch;
+  }
+
+  .fact-text strong {
+    color: var(--rust);
+    font-style: normal;
+  }
+
+  .fact-count {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--warm-gray);
+    letter-spacing: 0.06em;
+    margin-top: 1rem;
+  }
+
+  /* ---- CONTACT ---- */
+  #contact {
+    background: var(--ink);
+    padding: 7rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #contact::before {
+    content: 'CONTACT';
+    position: absolute;
+    right: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 9rem;
+    color: rgba(255,255,255,0.03);
+    letter-spacing: -0.03em;
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 6rem;
+    align-items: start;
+    max-width: 1100px;
+  }
+
+  .contact-left .section-label { color: var(--rust-light); }
+  .contact-left .section-label::before { background: var(--rust-light); }
+  .contact-left .section-title { color: var(--cream); margin-bottom: 1.5rem; }
+
+  .contact-intro {
+    font-size: 1rem;
+    color: rgba(245,240,232,0.6);
+    line-height: 1.8;
+    max-width: 38ch;
+    margin-bottom: 2rem;
+  }
+
+  .contact-availability {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .avail-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #4CAF50;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(76,175,80,0.2);
+    animation: pulse-green 2s ease-in-out infinite;
+  }
+@keyframes pulse-green {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(76,175,80,0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(76,175,80,0.08); }
+  }
+
+  .avail-text {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: rgba(245,240,232,0.45);
+    letter-spacing: 0.05em;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-item {
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+    border-bottom: 0.5px solid rgba(255,255,255,0.07);
+    text-decoration: none;
+    cursor: pointer;
+    transition: padding-left 0.25s ease, border-color 0.2s;
+    position: relative;
+  }
+
+  .contact-item:first-child { border-top: 0.5px solid rgba(255,255,255,0.07); }
+
+  .contact-item:hover {
+    padding-left: 0.75rem;
+    border-bottom-color: rgba(196,72,26,0.3);
+  }
+
+  .contact-item-resume {
+    margin-top: 0.5rem;
+    border-top: 0.5px solid rgba(255,255,255,0.07) !important;
+    border: 1.5px solid rgba(196,72,26,0.25);
+    padding: 1.25rem 1.25rem;
+    margin-top: 1.25rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .contact-item-resume:hover {
+    border-color: var(--rust);
+    background: rgba(196,72,26,0.06);
+    padding-left: 1.25rem;
+  }
+
+  .contact-item-icon {
+    width: 44px; height: 44px;
+    background: rgba(255,255,255,0.05);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--rust-light);
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+
+  .contact-item:hover .contact-item-icon { background: rgba(196,72,26,0.15); }
+
+  .contact-item-body { flex: 1; }
+
+  .contact-item-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.35);
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-item-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.15rem;
+    letter-spacing: -0.01em;
+  }
+
+  .contact-item-hint {
+    font-size: 0.78rem;
+    color: rgba(245,240,232,0.35);
+    line-height: 1.4;
+  }
+
+  .contact-item-arrow {
+    font-size: 1.1rem;
+    color: rgba(245,240,232,0.2);
+    transition: color 0.2s, transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .contact-item:hover .contact-item-arrow {
+    color: var(--rust-light);
+    transform: translate(2px, -2px);
+  }
+
+  .contact-item-resume:hover .contact-item-arrow {
+    transform: translateY(2px);
+  }
+
+  @media (max-width: 900px) {
+    #contact { padding: 4rem 1.5rem; }
+    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-intro { max-width: 100%; }
+  }
+
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .footer-name span { color: var(--rust); }
+
+  .footer-links {
+    display: flex;
+    gap: 1.75rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--rust-light); }
+
+  .footer-copy {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: rgba(245,240,232,0.2);
+    letter-spacing: 0.04em;
+  }
+
+  /* ---- ANIMATIONS ---- */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+
+    #hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-photo-col { height: 50vw; min-height: 280px; }
+    .hero-text-col { padding: 3rem 1.5rem; }
+    .hero-headline { font-size: clamp(2.5rem, 8vw, 4rem); }
+
+    section { padding: 4rem 1.5rem; }
+
+    .creator-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+
+    #origin { grid-template-columns: 1fr; }
+    .origin-aside { padding: 3rem 1.5rem; position: static; }
+    .origin-content { padding: 3rem 1.5rem; }
+
+    .workflow-grid { grid-template-columns: 1fr; }
+
+    .current-inner { grid-template-columns: 1fr; gap: 3rem; }
+
+    .role-line { display: none; }
+    .role-name { font-size: 1.5rem; }
+
+    footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+    .projects-header { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Udoka Kasie<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#creator">Creator</a></li>
+    <li><a href="#origin">Origin</a></li>
+    <li><a href="#workflow">Workflow</a></li>
+    <li><a href="#current">Now</a></li>
+    <li><a href="#fun">Fun</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-text-col">
+    <div class="hero-tag">Developer, Creator, &amp; Technical Communicator</div>
+    <h1 class="hero-headline">
+      I build software<br>
+      that <em>work</em><br>
+      &amp; words that<br>
+      <em>move.</em>
+    </h1>
+    <p class="hero-sub">
+      <strong></strong> MERN stack developer, technical writer, and creator.
+      I build human-centered products with intention, structure, and heart.
+    </p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary">See my work</a>
+      <a href="#contact" class="btn-ghost">Get in touch</a>
+    </div>
+  </div>
+
+  <div class="hero-photo-col">
+    <div class="hero-photo-bg"></div>
+    <div class="hero-photo-placeholder">
+     <img src="/Udoka Kasie dp.jpg" alt="" width="640px">
+    </div>
+  </div>
+
+</section>
+
+<!-- PROJECT MODAL -->
+<div class="modal-backdrop" id="projectModal">
+  <div class="modal" id="modalInner">
+    <button class="modal-close" id="modalClose">&#x2715;</button>
+    <div class="modal-cover" id="modalCover"></div>
+    <div class="modal-body">
+      <div class="modal-meta">
+        <div class="modal-type" id="modalType"></div>
+        <div class="modal-stack" id="modalStack"></div>
+      </div>
+      <p class="modal-story" id="modalStory"></p>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="projects-header fade-in">
+    <div>
+      <div class="section-label">Selected work</div>
+      <h2 class="section-title">Projects that<br><em>matter.</em></h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="coding">Coding</button>
+      <button class="filter-tab" data-filter="writing">Writing</button>
+    </div>
+  </div>
+
+  <div class="projects-grid" id="projectsGrid">
+
+    <!-- PantryPlates -->
+    <!-- <div class="project-card fade-in" data-type="coding" data-project="pantryplates">
+      <div class="card-cover">
+       <img src="/step4_vibe.png" alt=""  width="100%" height="100%" id="pantry">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-type"><span class="type-dot"></span>Coding</div>
+        <h3 class="card-title">AI Wedding Planner</h3>
+        <p class="card-excerpt">Match what's in your fridge to Nigerian recipes you'll actually make. Built because I was tired of defaulting to noodles.</p>
+        <div class="card-footer">
+          <div class="card-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Node</span>
+            <span class="stack-tag">MongoDB</span>
+          </div>
+          <span class="card-view-btn">View project &rarr;</span>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- PantryPlates -->
+    <div class="project-card fade-in" data-type="coding" data-project="pantryplates">
+      <div class="card-cover">
+       <img src="/pastry.png" alt=""  width="100%" height="100%" id="pantry">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-type"><span class="type-dot"></span>Coding</div>
+        <h3 class="card-title">PantryPlates</h3>
+        <p class="card-excerpt">Match what's in your fridge to Nigerian recipes you'll actually make. Built because I was tired of defaulting to noodles.</p>
+        <div class="card-footer">
+          <div class="card-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Node</span>
+            <span class="stack-tag">MongoDB</span>
+          </div>
+          <span class="card-view-btn">View project &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lumiere -->
+    <div class="project-card fade-in" data-type="coding" data-project="lumiere">
+      <div class="card-cover">
+       <img src="/Screenshot 2026-04-04 132147.png" alt=""  width="100%" height="100%" id="lumiere">
+
+      </div>
+      <div class="card-body">
+        <div class="card-type"><span class="type-dot"></span>Coding</div>
+        <h3 class="card-title">Lumière</h3>
+        <p class="card-excerpt">Salon booking system for a real business. Real-time slots, Paystack integration, and an admin dashboard that removes the back-and-forth.</p>
+        <div class="card-footer">
+          <div class="card-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Express</span>
+            <span class="stack-tag">Paystack</span>
+          </div>
+          <span class="card-view-btn">View project &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emilia -->
+    <div class="project-card fade-in" data-type="writing" data-project="emilia">
+      <div class="card-cover">
+       <img src="/book.png" alt=""  width="100%" height="100%" id="bookie">
+        <div class="card-cover-illus" style="background: linear-gradient(160deg, #0D0A06 0%, #2A1A08 60%, #C4481A 100%);">
+          <div class="cover-overlay"></div>
+          <div>
+            <div class="cover-label">Bookie</div>
+            <div class="cover-sub">Literary Fiction &bull; Novel</div>
+          </div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1;">
+            <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:0.72rem;color:rgba(255,255,255,0.15);letter-spacing:0.2em;text-transform:uppercase;text-align:center;line-height:2.5;max-width:180px;">Food &bull; Identity &bull; Ambition &bull; Italy &bull; Culinary School &bull; A Woman Unfolding</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-type"><span class="type-dot"></span>Coding</div>
+        <h3 class="card-title">Bookie</h3>
+        <p class="card-excerpt">A novel about a woman who builds a culinary career so singular it becomes its own country. Written under Udoka Kasie. Literary, precise, and in progress.</p>
+        <div class="card-footer">
+          <div class="card-stack">
+            <span class="stack-tag">Literary Fiction</span>
+            <span class="stack-tag">In Progress</span>
+          </div>
+          <span class="card-view-btn">View project &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+      <div class="project-card fade-in" data-type="writing" data-project="aipresentation">
+      <div class="card-cover">
+       <img src="/css.png" alt=""  width="100%" height="100%" id="pwa">
+      </div>
+      <div class="card-body">
+        <div class="card-type"><span class="type-dot"></span>Writing</div>
+        <h3 class="card-title">CSS variables/custom properties</h3>
+        <p class="card-excerpt">A 10-slide research-backed deck on AI and creativity, rebuilt with editorial visual thinking. Strong thesis, story-driven structure. No filler.</p>
+        <div class="card-footer">
+          <div class="card-stack">
+            <span class="stack-tag">Technical Comm.</span>
+            <span class="stack-tag">Research</span>
+          </div>
+          <span class="card-view-btn">View project &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Birthday web experience -->
+    <div class="project-card fade-in" data-type="writing" data-project="birthday">
+      <div class="card-cover">
+       <img src="/techcycle.png" alt=""  width="100%" height="100%" id="techcycle">
+
+        <div class="card-cover-illus" style="background: linear-gradient(135deg, #0A0A1A 0%, #1A1A3A 50%, #C4481A 100%);">
+          <div class="cover-overlay"></div>
+          <div>
+            <div class="cover-label">Tech Cycle</div>
+            <div class="cover-sub">Web experience &bull; Personal</div>
+          </div>
+          <div style="position:absolute;top:1rem;right:1rem;z-index:3;text-align:right;">
+            <div style="font-size:1.8rem;opacity:0.4;">&#10084;</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-type"><span class="type-dot"></span>Coding</div>
+        <h3 class="card-title">Tech Cycle</h3>
+        <p class="card-excerpt">A custom web experience built as a gift. Every section personalized — timelines, inside jokes as interactive visuals. The code was the love language.</p>
+        <div class="card-footer">
+          <div class="card-stack">
+            <span class="stack-tag">HTML/CSS/JS</span>
+            <span class="stack-tag">Storytelling</span>
+          </div>
+          <span class="card-view-btn">View project &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inventory Manager -->
+    <div class="project-card fade-in" data-type="coding" data-project="inventory">
+      <div class="card-cover">
+       <img src="/dear.png" alt=""  width="100%" height="100%" id="diary">
+
+        <div class="card-cover-illus" style="background: linear-gradient(135deg, #0A1520 0%, #1A3050 50%, #2196F3 100%);">
+          <div class="cover-overlay"></div>
+          <div>
+            <div class="cover-label">Dear Diary</div>
+            <div class="cover-sub">A journalling web app &bull; </div>
+          </div>
+          <div style="position:absolute;top:1rem;right:1rem;z-index:3;background:rgba(33,150,243,0.15);border:1px solid rgba(33,150,243,0.3);border-radius:4px;padding:0.5rem 0.75rem;width:120px;">
+            <div style="font-family:var(--font-mono);font-size:0.5rem;color:rgba(255,255,255,0.5);margin-bottom:0.4rem;">STOCK LEVELS</div>
+            <div style="display:flex;flex-direction:column;gap:0.3rem;">
+              <div style="display:flex;align-items:center;gap:0.4rem;"><div style="flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;"><div style="width:78%;height:100%;background:#2196F3;"></div></div><span style="font-family:var(--font-mono);font-size:0.48rem;color:rgba(255,255,255,0.5);">78%</span></div>
+              <div style="display:flex;align-items:center;gap:0.4rem;"><div style="flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;"><div style="width:32%;height:100%;background:#FF5722;"></div></div><span style="font-family:var(--font-mono);font-size:0.48rem;color:rgba(255,255,255,0.5);">32%</span></div>
+              <div style="display:flex;align-items:center;gap:0.4rem;"><div style="flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;"><div style="width:91%;height:100%;background:#4CAF50;"></div></div><span style="font-family:var(--font-mono);font-size:0.48rem;color:rgba(255,255,255,0.5);">91%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-type"><span class="type-dot"></span>Coding</div>
+        <h3 class="card-title">Dear Diary</h3>
+        <p class="card-excerpt">Sales and inventory for small Nigerian businesses — no steep learning curve, no USD subscription fee. Built in Next.js and TypeScript.</p>
+        <div class="card-footer">
+          <div class="card-stack">
+            <span class="stack-tag">Next.js</span>
+            <span class="stack-tag">TypeScript</span>
+            <span class="stack-tag">Postgres</span>
+          </div>
+          <span class="card-view-btn">View project &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Presentation -->
+    <div class="project-card fade-in" data-type="writing" data-project="aipresentation">
+      <div class="card-cover">
+       <img src="/pwa.png" alt=""  width="100%" height="100%" id="pwa">
+      </div>
+      <div class="card-body">
+        <div class="card-type"><span class="type-dot"></span>Writing</div>
+        <h3 class="card-title">Progressive Web Apps</h3>
+        <p class="card-excerpt">A 10-slide research-backed deck on AI and creativity, rebuilt with editorial visual thinking. Strong thesis, story-driven structure. No filler.</p>
+        <div class="card-footer">
+          <div class="card-stack">
+            <span class="stack-tag">Technical Comm.</span>
+            <span class="stack-tag">Research</span>
+          </div>
+          <span class="card-view-btn">View project &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+     <div class="project-card fade-in" data-type="writing" data-project="aipresentation">
+      <div class="card-cover">
+       <img src="/leaddev.png" alt=""  width="100%" height="100%" id="pwa">
+      </div>
+      <div class="card-body">
+        <div class="card-type"><span class="type-dot"></span>Writing</div>
+        <h3 class="card-title">Delegation formula for engineering managers</h3>
+        <p class="card-excerpt">A 10-slide research-backed deck on AI and creativity, rebuilt with editorial visual thinking. Strong thesis, story-driven structure. No filler.</p>
+        <div class="card-footer">
+          <div class="card-stack">
+            <span class="stack-tag">Technical Comm.</span>
+            <span class="stack-tag">Research</span>
+          </div>
+          <span class="card-view-btn">View project &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+
+ 
+  </div>
+</section>
+
+<!-- CREATOR / VIDEO -->
+<section id="creator">
+  <div class="section-label">Creator presence</div>
+  <h2 class="section-title">Video content<br>&amp; <em>speaking.</em></h2>
+
+  <div class="creator-layout">
+    <div>
+      <div class="yt-mockup fade-in">
+        <div class="yt-topbar">
+          <div class="yt-logo-text">You<span>Tube</span></div>
+        </div>
+        <div class="yt-channel-banner">
+          <img src="/ytch.png" alt="" width="100%">
+          <!-- <div class="yt-banner-text">Udoka Kasie</div> -->
+        </div>
+        <div class="yt-channel-info">
+          <div class="yt-avatar">UG</div>
+          <div>
+            <div class="yt-channel-name">Udoka Kasie</div>
+            <div class="yt-subs">Tech &bull; Coding &bull; Developer Journey</div>
+          </div>
+        </div>
+        <div class="yt-videos">
+          <div class="yt-thumb yt-thumb-1">
+            <img src="/techsters.jpeg" alt="" width="100%">
+            <div class="yt-thumb-title">Not Available at Your Location</div>
+          </div>
+          <div class="yt-thumb yt-thumb-2">
+            <img src="/thumbnail.jpeg" alt="" width="100%">
+            <div class="yt-thumb-title">Why Developers Burn Out Quietly</div>
+          </div>
+          <div class="yt-thumb yt-thumb-3">
+            <img src="/thumbnail2.png" alt="" width="100%">
+            <div class="yt-thumb-title">What AI Can't Take From You</div>
+          </div>
+          <div class="yt-thumb yt-thumb-4">
+            <img src="/ai.jpeg" alt="" width="90%">
+            <div class="yt-thumb-title">Building in Nigeria &mdash; Documentary</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="creator-right fade-in">
+      <p class="creator-blurb">
+        My YouTube channel is where the technical and the poetic meet. Each video pairs a <strong>cinematic short film</strong> with a talking-head deep dive — tech psychology and culture, told from the inside, from Nigeria, from experience.
+      </p>
+
+      <div class="speaking-list">
+        <div class="speaking-item">
+          <div class="speaking-icon">&#9670;</div>
+          <div class="speaking-text">
+            <div class="speaking-title">Community talks — Developer Discord</div>
+            <div class="speaking-desc">Leads a 130-member developer community &bull; Regular discussions on AI and the industry</div>
+          </div>
+        </div>
+        <div class="speaking-item">
+          <div class="speaking-icon">&#9670;</div>
+          <div class="speaking-text">
+            <div class="speaking-title">AI &amp; Creativity — Presentation</div>
+            <div class="speaking-desc">Full research-backed talk on AI's impact on problem solving &bull; Delivered live</div>
+          </div>
+        </div>
+        <div class="speaking-item">
+          <div class="speaking-icon">&#9670;</div>
+          <div class="speaking-text">
+            <div class="speaking-title">Technical mentorship &amp; teaching</div>
+            <div class="speaking-desc">HTML/CSS instruction &bull; Mentors junior developers actively</div>
+          </div>
+        </div>
+        <div class="speaking-item">
+          <div class="speaking-icon">&#9670;</div>
+          <div class="speaking-text">
+            <div class="speaking-title">Open to speaking opportunities</div>
+            <div class="speaking-desc">Dev advocacy &bull; Tech culture &bull; Building in Africa &bull; Women in tech</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="creator-cta">Visit channel &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN STORY -->
+<section id="origin">
+  <div class="origin-aside">
+    <div class="section-label">Where it all began</div>
+    <div class="origin-year">2022</div>
+    <div class="origin-aside-title">A physiotherapy student who taught herself to code during a strike.</div>
+  </div>
+
+  <div class="origin-content fade-in">
+    <div class="origin-body">
+      <p>
+        University went on strike. The country paused. Most students waited. I opened a laptop and started learning to build things on the internet.
+
+        That is the origin. No bootcamp, no tech background, no one in my immediate circle who could point me toward a GitHub repository. Just a strike period, an internet connection, and the stubborn suspicion that software was something I could learn.
+      </p>
+
+      <div class="origin-pull">
+        "The story I use to describe myself is the most honest one: I built these skills while earning a physiotherapy degree, alone, during a national pause."
+      </div>
+
+      <p>
+        I finished the degree. I also finished learning React, Node, Express, and MongoDB. Not because I had to pivot away from healthcare — but because I became someone who could see both worlds at once. A developer who understood clinical workflows. A builder who knew what it actually meant when a system failed someone in pain.
+      </p>
+
+      <p>
+        That dual perspective is not incidental. It is the engine behind Emergent, my healthcare tech startup. It is why I can write technical documentation that a nurse can read without a translator. It is why the fiction I write has structure, and why the code I write has intention.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WORKFLOW -->
+<section id="workflow">
+  <div class="fade-in">
+    <div class="section-label">Process</div>
+    <h2 class="section-title">How I <em>work.</em></h2>
+  </div>
+
+  <div class="workflow-grid">
+    <div class="workflow-col fade-in">
+      <div class="workflow-col-header">
+        <div class="workflow-icon-box" style="color:#fff; font-size:0.9rem;">&#x2771;</div>
+        <div class="workflow-col-title">Coding Workflow</div>
+      </div>
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-name">Understand the problem before touching code</div>
+            <div class="step-desc">I ask: who is this for, what breaks without it, what does success look like in plain language.</div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-name">Architecture — big picture first</div>
+            <div class="step-desc">Data model, component tree, API shape. I map it before I write the first line.</div>
+            <div class="step-tools">
+              <span class="tool-pill">Excalidraw</span>
+              <span class="tool-pill">Notion</span>
+            </div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-name">Build in layers — scaffold, fill, polish</div>
+            <div class="step-desc">Get it working ugly. Then make it clean. Then make it fast. In that order.</div>
+            <div class="step-tools">
+              <span class="tool-pill">VS Code</span>
+              <span class="tool-pill">React</span>
+              <span class="tool-pill">Node</span>
+            </div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-name">Test like a suspicious user</div>
+            <div class="step-desc">I try to break what I build. Edge cases, bad inputs, slow connections.</div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <div class="step-name">Ship, observe, iterate</div>
+            <div class="step-desc">Deployment is the beginning of learning, not the end of building.</div>
+            <div class="step-tools">
+              <span class="tool-pill">Vercel</span>
+              <span class="tool-pill">Render</span>
+              <span class="tool-pill">GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="workflow-col fade-in">
+      <div class="workflow-col-header">
+        <div class="workflow-icon-box" style="color:#fff; font-size:0.9rem;">&#9998;</div>
+        <div class="workflow-col-title">Writing Workflow</div>
+      </div>
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-name">Find the real question</div>
+            <div class="step-desc">Every piece of writing has a question underneath it. I don't start until I can name it.</div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-name">Structure before prose</div>
+            <div class="step-desc">Outline with intention. Know where each section is going before writing the first sentence.</div>
+            <div class="step-tools">
+              <span class="tool-pill">Notion</span>
+              <span class="tool-pill">iA Writer</span>
+            </div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-name">Write fast, edit slow</div>
+            <div class="step-desc">First drafts are for thinking. Editing is where the writing actually happens.</div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-name">Read it out loud</div>
+            <div class="step-desc">If I can't read it without pausing, it needs rewriting. Rhythm is non-negotiable.</div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <div class="step-name">Cut anything that doesn't earn its place</div>
+            <div class="step-desc">Good writing is mostly deletion. Every word should be doing something.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES -->
+<section id="roles">
+  <div class="fade-in">
+    <div class="section-label">What I bring</div>
+    <h2 class="section-title">Roles I'm<br><em>qualified for.</em></h2>
+    <p class="roles-intro">Not a list of aspirations. A description of what I actually do and have done.</p>
+  </div>
+
+  <div class="roles-list fade-in">
+    <div class="role-row">
+      <div class="role-num">01</div>
+      <div class="role-name">Frontend Developer</div>
+      <div class="role-line">React, Vite, component architecture, UI logic, real deployed products</div>
+    </div>
+    <div class="role-row">
+      <div class="role-num">02</div>
+      <div class="role-name">Full-Stack Developer</div>
+      <div class="role-line">MERN stack end-to-end, REST APIs, database design, auth, payment integration</div>
+    </div>
+    <div class="role-row">
+      <div class="role-num">03</div>
+      <div class="role-name">Developer Advocate</div>
+      <div class="role-line">Community leadership, technical communication, teaching, public speaking</div>
+    </div>
+    <div class="role-row">
+      <div class="role-num">04</div>
+      <div class="role-name">Technical Writer</div>
+      <div class="role-line">Documentation, editorial thinking, long-form technical content, precision prose</div>
+    </div>
+</section>
+
+<!-- CURRENT WORK -->
+<section id="current">
+  <div class="section-label">Right now</div>
+  <h2 class="section-title" style="margin-bottom: 0;">What I'm<br><em>building.</em></h2>
+
+  <div class="current-inner">
+    <div class="emergent-card fade-in" id="emergent-card">
+      <div class="emergent-badge">&#9679; Active Build</div>
+      <div class="emergent-name">Emergent</div>
+      <div class="emergent-tagline">Emergency health information system &mdash; Nigeria</div>
+      <p class="emergent-desc">
+        A hospital-facing platform designed to reduce information gaps in emergency settings across Nigeria. Built for Enugu as pilot city. Subscription-based SaaS for hospitals, tiered by capacity.
+      </p>
+
+      <div class="progress-label">
+        <span>Build progress</span>
+        <span id="progress-text">62%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <div class="emergent-milestones">
+        <div class="milestone done"><div class="milestone-dot"></div>TEF 2026 grant application submitted</div>
+        <div class="milestone done"><div class="milestone-dot"></div>9-person volunteer team assembled</div>
+        <div class="milestone done"><div class="milestone-dot"></div>Revenue model &amp; company structure defined</div>
+        <div class="milestone done"><div class="milestone-dot"></div>Private Limited Company registration underway</div>
+        <div class="milestone"><div class="milestone-dot"></div>Hospital partnership — Enugu pilot</div>
+        <div class="milestone"><div class="milestone-dot"></div>MVP launch</div>
+      </div>
+    </div>
+
+    <div class="current-text fade-in">
+      <div class="section-label" style="margin-bottom:1rem">The why</div>
+      <p class="current-desc">
+        Nigeria's emergency health system has a documentation and information-sharing problem. Patients arrive at hospitals with no transferable record. Clinicians make decisions in the dark. Emergent is being built to change that — one hospital at a time, starting in Enugu.
+      </p>
+      <p class="current-desc">
+        This is not a side project. I co-founded it. I lead the team. I am the developer, the project manager, and the person who stays up thinking about it. It is being kept private until hospital partnerships are secured.
+      </p>
+
+      <div class="current-stats">
+        <div class="stat-box">
+          <span class="stat-num">9</span>
+          <div class="stat-label">Team members</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">1</span>
+          <div class="stat-label">Pilot city</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">2026</span>
+          <div class="stat-label">Launch year</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUN -->
+<section id="fun">
+  <div class="fun-inner">
+    <div class="section-label" style="justify-content:center">About me</div>
+    <h2 class="section-title">The stuff<br>the CV <em>misses.</em></h2>
+
+    <div class="fun-trigger">
+      <button class="fun-btn" id="factBtn">
+        <span>Tell me something about Udoka</span>
+        <span class="fun-arrow">&#8599;</span>
+      </button>
+    </div>
+
+    <div class="fact-display" id="factDisplay">
+      <div>
+        <p class="fact-text" id="factText"></p>
+        <p class="fact-count" id="factCount"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-left fade-in">
+      <div class="section-label">Let's talk</div>
+      <h2 class="section-title">Get in<br><em>touch.</em></h2>
+      <p class="contact-intro">
+        I'm open to frontend and full-stack roles, dev advocate positions, technical writing contracts, and meaningful collaborations. If what you're building is interesting, I want to hear about it.
+      </p>
+      <div class="contact-availability">
+        <span class="avail-dot"></span>
+        <span class="avail-text">Available for new opportunities</span>
+      </div>
+    </div>
+
+    <div class="contact-right fade-in">
+      <div class="contact-links">
+
+        <a href="mailto:hello@udokakasie.com" class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">hello@udokakasie.com</div>
+            <div class="contact-item-hint">Best for work enquiries and collaborations</div>
+          </div>
+          <div class="contact-item-arrow">&#8599;</div>
+        </a>
+
+        <a href="https://linkedin.com/in/udokakasie" target="_blank" class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <div class="contact-item-label">LinkedIn</div>
+            <div class="contact-item-value">linkedin.com/in/udokakasie</div>
+            <div class="contact-item-hint">Professional history, recommendations, network</div>
+          </div>
+          <div class="contact-item-arrow">&#8599;</div>
+        </a>
+
+        <a href="https://github.com/udokakasie" target="_blank" class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <div class="contact-item-label">GitHub</div>
+            <div class="contact-item-value">github.com/udokakasie</div>
+            <div class="contact-item-hint">Code, repositories, commit history</div>
+          </div>
+          <div class="contact-item-arrow">&#8599;</div>
+        </a>
+
+        <a href="https://youtube.com/@udokagarcia" target="_blank" class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <div class="contact-item-label">YouTube</div>
+            <div class="contact-item-value">@udokagarcia</div>
+            <div class="contact-item-hint">Cinematic tech content, short films, deep dives</div>
+          </div>
+          <div class="contact-item-arrow">&#8599;</div>
+        </a>
+
+        <a href="/udoka-kasie-resume.pdf" target="_blank" class="contact-item contact-item-resume">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <div class="contact-item-label">Resume</div>
+            <div class="contact-item-value">Download CV</div>
+            <div class="contact-item-hint">Full work history, skills, and education — PDF</div>
+          </div>
+          <div class="contact-item-arrow">&#8595;</div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Udoka Kasie<span>.</span></div>
+  <ul class="footer-links">
+    <li><a href="#">GitHub</a></li>
+    <li><a href="#">LinkedIn</a></li>
+    <li><a href="#">YouTube</a></li>
+    <li><a href="#">Email</a></li>
+  </ul>
+  <div class="footer-copy">&copy; 2026 Udoka Kasie. Built with intention.</div>
+</footer>
+
+
+  <script>
+    const lumiere = document.getElementById('lumiere').src
+    const pantry = document.getElementById('pantry').src
+    const bookie = document.getElementById('bookie').src
+
+  // --- Project data ---
+  const projects = {
+    pantryplates: {
+      name: 'PantryPlates',
+      type: 'Coding',
+      stack: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB'],
+      coverBg: pantry,
+      story: `I built PantryPlates because I was tired of staring at a fridge full of ingredients and defaulting to instant noodles. The premise is simple: tell it what you have, and it finds Nigerian recipes you'll actually make.\n\nUnder the hood it's a full MERN stack application with an ingredient matching algorithm, synonym support (so "tomatoes" and "fresh tomatoes" both work), and a curated 29-meal Nigerian food database built from scratch. The frontend is React with Vite — fast, clean, and actually usable on a slow Nigerian connection.`,
+      liveUrl: '#',
+      githubUrl: '#',
+      status: 'live'
+    },
+    lumiere: {
+      name: 'Lumière',
+      type: 'Coding',
+      stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Paystack'],
+      coverBg: lumiere,
+      story: `Lumière is a full-stack salon booking system built for a real business with real clients. The owner was managing bookings via WhatsApp and phone calls — a system that worked until it didn't.\n\nI built real-time slot availability so clients only see genuinely open times. Paystack integration handles payments at booking, which eliminated no-shows. The admin dashboard gives the owner a clear view of the day without having to call anyone back. This is the kind of problem I find satisfying: a real operational headache, solved cleanly with software.`,
+      liveUrl: '#',
+      githubUrl: '#',
+      status: 'live'
+    },
+    emilia: {
+      name: 'Emilia',
+      type: 'Writing — Literary Fiction',
+      stack: ['Literary Fiction', 'Long-form', 'In Progress'],
+      coverBg: bookie,
+      story: `Emilia is a novel about a woman who builds a culinary career so singular it becomes its own country. She attends culinary school, takes a food tour through Italy, creates a viral fusion dish, conceives the Foodlab concept, and delivers a graduation speech that is the most honest thing she has ever said.\n\nI write under the name Udoka Kasie. The prose is literary — structured like code, in the sense that every sentence is doing something intentional. I connected deeply with Elizabeth Gilbert's idea of ideas choosing their human. This one chose me during a period when I needed something entirely mine.`,
+      liveUrl: null,
+      githubUrl: null,
+      excerptUrl: '#',
+      status: 'inprogress'
+    },
+    birthday: {
+      name: "Chinwizu's Birthday",
+      type: 'Writing + Coding',
+      stack: ['HTML/CSS/JS', 'Custom Design', 'Storytelling'],
+      coverBg: 'linear-gradient(135deg, #0A0A1A 0%, #1A1A3A 50%, #C4481A 100%)',
+      story: `This was a birthday gift for someone I love. I built a custom web experience — not a card, not a playlist, not flowers. A website.\n\nEvery section was built around something specific to us: a timeline of our relationship rendered as an interactive scroll, inside jokes turned into small interactive moments, a section that played a song we both know. The design was warm and deliberate. The code was careful in the same way a handwritten letter is careful.\n\nIt was warmly received. It is also the project I am most quietly proud of — because the audience was one person, and it landed exactly right.`,
+      liveUrl: '#',
+      githubUrl: null,
+      status: 'live'
+    },
+    inventory: {
+      name: 'Inventory Manager',
+      type: 'Coding — In Progress',
+      stack: ['Next.js', 'TypeScript', 'Tailwind', 'PostgreSQL'],
+      coverBg: 'linear-gradient(135deg, #0A1520 0%, #1A3050 50%, #2196F3 100%)',
+      story: `Small Nigerian businesses run on spreadsheets and memory. Both eventually fail. This inventory and sales management app is being built for that gap — a system that works without a laptop science degree to set up or a USD subscription fee to sustain.\n\nThis is also my first production project in Next.js and TypeScript — a deliberate skill-building choice. I'm learning server components, TypeScript strictness, and proper data modeling while building something that will actually be used. The constraint is real: it needs to work on intermittent internet connections.`,
+      liveUrl: null,
+      githubUrl: '#',
+      status: 'inprogress'
+    },
+    aipresentation: {
+      name: 'AI Impact Presentation',
+      type: 'Writing — Technical Communication',
+      stack: ['Research', 'Slide Design', 'Technical Writing'],
+      coverBg: 'linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 50%, #C4481A 100%)',
+      story: `A 10-slide deck on how AI changes problem-solving and creativity — rebuilt from scratch after the first version was too generic.\n\nThe thesis is specific: AI doesn't replace creative thinking, it relocates where in the process that thinking is required. The structure is story-driven — each slide builds on the last, no orphaned facts, no filler slides that exist just to show research was done.\n\nI directed the design rebuild myself: strong editorial hierarchy, intentional use of whitespace, and a visual language that matched the argument. Delivered live.`,
+      liveUrl: '#',
+      githubUrl: null,
+      status: 'live'
+    }
+  };
+
+  // --- Modal ---
+  const modal = document.getElementById('projectModal');
+  const modalClose = document.getElementById('modalClose');
+  const modalCover = document.getElementById('modalCover');
+  const modalType = document.getElementById('modalType');
+  const modalStack = document.getElementById('modalStack');
+  const modalStory = document.getElementById('modalStory');
+  const modalActions = document.getElementById('modalActions');
+
+  function openModal(key) {
+    const p = projects[key];
+    if (!p) return;
+
+    // Cover
+    modalCover.innerHTML = `
+      <div class="modal-cover-illus">
+          <img src=" ${p.coverBg} " alt="" class="card-cover-img" width="240px" id="lumiere">    
+      </div>`;
+
+    // Meta
+    modalType.innerHTML = `<span class="type-dot"></span>${p.type}`;
+    modalStack.innerHTML = p.stack.map(s => `<span class="stack-tag">${s}</span>`).join('');
+
+    // Story — split by \n\n into paragraphs
+    modalStory.innerHTML = p.story.split('\n\n').map(para => `<p style="margin-bottom:1rem;">${para}</p>`).join('');
+
+    // Actions
+    let actions = '';
+    if (p.status === 'live' && p.liveUrl) {
+      actions += `<a href="${p.liveUrl}" target="_blank" class="modal-btn-primary">&#x2197; Live demo</a>`;
+    } else if (p.status === 'inprogress') {
+      actions += `<span class="modal-btn-disabled">In progress &mdash; no live demo yet</span>`;
+    }
+    if (p.githubUrl) {
+      actions += `<a href="${p.githubUrl}" target="_blank" class="modal-btn-ghost">&#x2B21; GitHub repo</a>`;
+    }
+    if (p.excerptUrl) {
+      actions += `<a href="${p.excerptUrl}" target="_blank" class="modal-btn-ghost">Read excerpt</a>`;
+    }
+    modalActions.innerHTML = actions;
+
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => openModal(card.dataset.project));
+  });
+
+  // --- Filter tabs ---
+  const tabs = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('.project-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.type === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // --- Intersection Observer for fade-ins ---
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  faders.forEach(el => observer.observe(el));
+
+  // --- Fun facts ---
+  const facts = [
+    { text: "I earned a <strong>physiotherapy degree</strong> and a self-taught MERN stack at the same time, during a university strike. Both were hard. Neither was wasted.", count: "Fact 1 of 7" },
+    { text: "I write <strong>literary fiction</strong> under the name Udoka Kasie. My novel is called Emilia. It is about food, identity, and a woman who refuses to be small.", count: "Fact 2 of 7" },
+    { text: "I built a <strong>personalized birthday website</strong> for someone I love, with custom visuals and our shared history coded in. It was better than any gift I could have bought.", count: "Fact 3 of 7" },
+    { text: "I run a <strong>Discord community of 130 developers</strong> in Nigeria. I moderate it, speak in it, and learn from it in equal measure.", count: "Fact 4 of 7" },
+    { text: "My YouTube channel is called <strong>Udoka Garcia</strong>. I make cinematic short films about the psychology and culture of tech. No talking-head filler.", count: "Fact 5 of 7" },
+    { text: "I co-founded <strong>Emergent</strong> because I know what it looks like when a hospital doesn't have the information it needs. That knowledge comes from my physiotherapy training.", count: "Fact 6 of 7" },
+    { text: "I identify as a <strong>lover girl</strong> — not as a personality trait but as a philosophy. Careful attention to people is the same skill whether I'm designing a product or writing a story.", count: "Fact 7 of 7" },
+  ];
+
+  let factIndex = 0;
+  const factBtn = document.getElementById('factBtn');
+  const factDisplay = document.getElementById('factDisplay');
+  const factText = document.getElementById('factText');
+  const factCount = document.getElementById('factCount');
+
+  factBtn.addEventListener('click', () => {
+    factDisplay.classList.remove('visible');
+    setTimeout(() => {
+      factText.innerHTML = facts[factIndex].text;
+      factCount.textContent = facts[factIndex].count;
+      factDisplay.classList.add('visible');
+      factIndex = (factIndex + 1) % facts.length;
+    }, 200);
+  });
+
+  factBtn.click();
+</script>
+
+</body>
+</html>
