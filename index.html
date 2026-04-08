@@ -1675,6 +1675,235 @@
 
     .projects-header { flex-direction: column; align-items: flex-start; }
   }
+  @media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* HERO */
+  #hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-text-col {
+    min-width: unset;
+    padding: 6rem 1.25rem 3rem;
+  }
+
+  .hero-photo-col {
+    height: 60vw;
+    min-height: 260px;
+  }
+
+  .hero-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.4rem, 9vw, 3.5rem);
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 4rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  /* PROJECTS */
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .filter-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  /* CREATOR */
+  .creator-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .yt-videos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .creator-right {
+    gap: 1.5rem;
+  }
+
+  /* ORIGIN */
+  #origin {
+    grid-template-columns: 1fr;
+    padding: 0;
+    min-height: auto;
+  }
+
+  .origin-aside {
+    padding: 3rem 1.25rem;
+    position: static;
+  }
+
+  .origin-content {
+    padding: 3rem 1.25rem;
+  }
+
+  .origin-body {
+    font-size: 1rem;
+  }
+
+  .origin-pull {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  /* WORKFLOW */
+  #workflow {
+    padding: 4rem 1.25rem;
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+
+  .workflow-col {
+    padding: 2rem 1.25rem;
+  }
+
+  /* ROLES */
+  #roles {
+    padding: 4rem 1.25rem;
+  }
+
+  .role-name {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+
+  .role-line {
+    display: none;
+  }
+
+  .role-row {
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+  }
+
+  /* CURRENT */
+  #current {
+    padding: 4rem 1.25rem;
+  }
+
+  .current-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .emergent-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .current-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* FUN */
+  #fun {
+    padding: 4rem 1.25rem;
+  }
+
+  .fun-btn {
+    font-size: 0.95rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* CONTACT */
+  #contact {
+    padding: 4rem 1.25rem;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-intro {
+    max-width: 100%;
+  }
+
+  .contact-item {
+    grid-template-columns: 40px 1fr auto;
+    gap: 0.75rem;
+  }
+
+  .contact-item-value {
+    font-size: 0.82rem;
+    word-break: break-all;
+  }
+
+  /* MODAL */
+  .modal-body {
+    padding: 1.5rem 1.25rem 2rem;
+  }
+
+  .modal-cover-title {
+    font-size: 2rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-btn-primary,
+  .modal-btn-ghost,
+  .modal-btn-disabled {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.25rem;
+    gap: 1rem;
+  }
+}
 </style>
 </head>
 <body>
