@@ -79,6 +79,28 @@
   }
 
   .nav-links a:hover { color: var(--rust); }
+  .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 300;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  transition: all 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   /* ---- HERO ---- */
   #hero {
@@ -91,13 +113,12 @@
   }
 
   .hero-text-col {
-    min-width: 640px;
+    min-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 3rem 4rem 4rem;
-    position: relative;
-    z-index: 2;
+    padding: 3rem 1rem;
+    padding-right: 0;
   }
 
   .hero-tag {
@@ -195,7 +216,7 @@
   }
 
   .hero-photo-bg {
-    position: absolute;
+    /* position: absolute; */
     inset: 0;
     /* background: linear-gradient(135deg, #E8D5C0 0%, #C4A882 100%); */
   }
@@ -1648,8 +1669,25 @@
 
   /* ---- RESPONSIVE ---- */
   @media (max-width: 900px) {
+    .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(245,240,232,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    padding: 1.5rem;
+    gap: 1.5rem;
+    z-index: 200;
+  }
+
+  .nav-links.open { display: flex; }
     nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
 
     #hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-photo-col { height: 50vw; min-height: 280px; }
@@ -1675,16 +1713,29 @@
 
     .projects-header { flex-direction: column; align-items: flex-start; }
   }
+
+  /* --------------------------------More media queries------------- */
   @media (max-width: 768px) {
 
   /* NAV */
-  nav {
-    padding: 1rem 1.25rem;
-  }
+  .hamburger { display: flex; }
 
   .nav-links {
     display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(245,240,232,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    padding: 1.5rem;
+    gap: 1.5rem;
+    z-index: 200;
   }
+
+  .nav-links.open { display: flex; }
 
   /* HERO */
   #hero {
@@ -1701,9 +1752,10 @@
     height: 60vw;
     min-height: 260px;
   }
+ 
 
   .hero-photo-placeholder img {
-    width: 100%;
+    width: 82%;
     height: 100%;
     object-fit: cover;
   }
@@ -1913,12 +1965,18 @@
   <a href="#hero" class="nav-logo">Udoka Kasie<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#creator">Creator</a></li>
-    <li><a href="#origin">Origin</a></li>
+    <li><a href="#creator">Videos/Speaking</a></li>
+    <li><a href="#origin">My Story</a></li>
     <li><a href="#workflow">Workflow</a></li>
     <li><a href="#current">Now</a></li>
-    <li><a href="#fun">Fun</a></li>
+    <li><a href="#contact">Contact</a></li>
+
   </ul>
+  <button class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 </nav>
 
 <!-- HERO -->
@@ -1941,7 +1999,7 @@
   <div class="hero-photo-col">
     <div class="hero-photo-bg"></div>
     <div class="hero-photo-placeholder">
-     <img src="/Udoka Kasie dp.jpg" alt="" width="640px">
+     <img src="/Udoka Kasie dp.jpg" alt="" width="620px" class="udoka-img">
     </div>
   </div>
 
@@ -2161,9 +2219,9 @@
       </div>
     </div>
 
-     <div class="project-card fade-in" data-type="writing" data-project="aipresentation">
+     <div class="project-card fade-in" data-type="writing" data-project="leaddev">
       <div class="card-cover">
-       <img src="/leaddev.png" alt=""  width="100%" height="100%" id="pwa">
+       <img src="/leaddev.png" alt=""  width="100%" height="100%" id="leaddev">
       </div>
       <div class="card-body">
         <div class="card-type"><span class="type-dot"></span>Writing</div>
@@ -2227,7 +2285,7 @@
 
     <div class="creator-right fade-in">
       <p class="creator-blurb">
-         I have filmed and posted multiple videos online, but underneath everything I do as a creator, there are three things guiding me: storytelling, accuracy, and authenticity. These ingredients have changed alot in my tech journey. For example:
+         I have filmed and posted multiple videos online, but underneath everything I do as a creator, there are three things guiding me: storytelling, creative freedom, and authenticity. These ingredients have changed alot in my tech journey. For example:
       </p>
 
       <div class="speaking-list">
@@ -2249,7 +2307,7 @@
           <div class="speaking-icon">&#9670;</div>
           <div class="speaking-text">
             <div class="speaking-title">Connections</div>
-            <div class="speaking-desc">I have built diverse connections from different places, and i get to reach more people that need my experience and story.</div>
+            <div class="speaking-desc">I have built diverse connections from different places, and I get to reach more people that need my experience and story.</div>
           </div>
         </div>
 
@@ -2424,7 +2482,7 @@
     <div class="current-text fade-in">
       <div class="section-label" style="margin-bottom:1rem">The why</div>
       <p class="current-desc">
-        Nigeria's emergency health system has a documentation and information-sharing problem. Patients are always confused on which hospitals to go especially due to infrastructure blood availability etc. Emergent is being built to change that, we would make sure that every Nigerian in an emergency knows where exactly to go, and never loses a life due to lack of information.
+        Nigeria's emergency health system has a documentation and information-sharing problem. Patients are always confused on which hospitals to go especially due to infrastructure, blood availability etc. Emergent is being built to change that, we would make sure that every Nigerian in an emergency knows where exactly to go, and never loses a life due to lack of information.
       </p>
     
       <div class="current-stats">
@@ -2473,7 +2531,7 @@
       <div class="section-label">Let's talk</div>
       <h2 class="section-title">Get in<br><em>touch.</em></h2>
       <p class="contact-intro">
-        I'm open to frontend and full-stack roles, dev advocate positions, technical writing contracts, and meaningful collaborations. If what you're building is interesting, I want to hear about it.
+        <!-- I'm open to frontend and full-stack roles, dev advocate positions, technical writing contracts, and meaningful collaborations. If what you're building is interesting, I want to hear about it. -->
       </p>
       <div class="contact-availability">
         <span class="avail-dot"></span>
@@ -2560,6 +2618,22 @@
 
 
   <script>
+    const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
+
     const lumiere = document.getElementById('lumiere').src
     const pantry = document.getElementById('pantry').src
     const bookie = document.getElementById('bookie').src
@@ -2567,6 +2641,8 @@
     const techcycle = document.getElementById('techcycle').src
     const deardiary = document.getElementById('diary').src
     const prwaImg = document.getElementById('prwa').src
+    const leaddev = document.getElementById('leaddev').src
+
 
 
 
@@ -2662,8 +2738,8 @@ Entries are stored using local storage, allowing data to persist without requiri
       name: "Delegation article",
       type: 'Writing',
       stack: ['Editing', 'Technical writing', 'Proofreading', 'Research'],
-      coverBg: prwaImg,
-      story: `One of my published pieces on leaddev, that i worked with content and editorial team to write.`,
+      coverBg: leaddev,
+      story: `One of my published pieces on leaddev. I worked with content and editorial team to write and publish it.`,
       liveUrl: null,
       githubUrl: null,
       excerptUrl: 'https://leaddev.com/management/the-delegation-formula-that-turns-managers-into-leaders',
