@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/udoka-portfolio",
+      "destination": "/udoka-kasie",
+      "permanent": true
+    }
+  ]
+}
